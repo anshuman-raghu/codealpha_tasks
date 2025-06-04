@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Event Registration System</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Event Registration System</h1>
+
+            <section>
+                <h2>User Registration</h2>
+                <form id="registerForm">
+                    <label for="registerName">Name:</label>
+                    <input type="text" id="registerName" required />
+                    <label for="registerEmail">Email:</label>
+                    <input type="email" id="registerEmail" required />
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" required />
+                    <button type="submit">Register</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>User Login</h2>
+                <form id="loginForm">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required />
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required />
+                    <button type="submit">Login</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>Create Event (Admin/Logged in User)</h2>
+                <form id="createEventForm">
+                    <label for="eventTitle">Title:</label>
+                    <input type="text" id="eventTitle" required />
+                    <label for="eventDescription">Description:</label>
+                    <textarea id="eventDescription" rows="3"></textarea>
+                    <label for="eventDate">Date:</label>
+                    <input type="datetime-local" id="eventDate" required />
+                    <label for="eventLocation">Location:</label>
+                    <input type="text" id="eventLocation" required />
+                    <button type="submit">Create Event</button>
+                </form>
+            </section>
+
+            <section>
+                <h2>Available Events</h2>
+                <div id="eventList" class="event-list"></div>
+            </section>
+
+            <section>
+                <h2>My Registrations</h2>
+                <div id="myRegistrations" class="registration-list"></div>
+            </section>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
